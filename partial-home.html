@@ -1,0 +1,36 @@
+<html ng-app="applist">
+        <head >
+                <link rel="stylesheet" href="/css/bootstrap.min.css">
+        </head>
+        <body>       
+                <div ui-view>
+                    <div ng-controller="userController">
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">Names</div>
+                                <div class="panel panel-body">
+                                    <div class="row">
+                                        <div ng-repeat="user in users.data">
+                                                <span class="text text-success">User ID</span>   {{user.id}} <br>          
+                                                <span class="text text-danger">User Name</span> --  {{user.name}} <br>               
+                                        </div>
+                                        <hr>
+                                    </div>
+                                </div>
+                                <div class="panel panel-footer">
+                                    <button class="btn btn-primary">Add</button>
+                                    <button class="btn btn-danger">Remove</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- Angular js  -->
+            <script src="scripts/vendors/angular/angular.js"></script>
+            <script src="scripts/app.module.js"></script>
+            <script src="scripts/applist.module.js"></script>
+            <script src="scripts/bootstrap.min.js"></script>
+            <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+            <script src="controllers/userController.js"></script>
+            <script src="services/userservice.js"></script>
+            <script src="services/getusers.js"></script>    
+        </body>
+        </html>

@@ -1,13 +1,35 @@
 <html ng-app="app">
 <head >
-
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        
 </head>
 <body>
     <div class="container">
-        <h1>hello world</h1> 
+            <nav class="navbar navbar-inverse" role="navigation">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" ui-sref="#">Users</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li><a ui-sref="home">Home</a></li>
+                        <li><a ui-sref="about">About</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- MAIN CONTENT -->
+                <div class="container">
+                
+                    <div ui-view></div>
+                
+                </div>
     </div>
     <!-- Angular js  -->
     <script src="scripts/vendors/angular/angular.js"></script>
+    <script src="scripts/applist.module.js"></script>
     <script src="scripts/app.module.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script src="controllers/userController.js"></script>
+    <script src="services/getusers.js"></script>    
+    <script src="services/userservice.js"></script>
 </body>
 </html>
