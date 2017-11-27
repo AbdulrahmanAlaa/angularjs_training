@@ -1,12 +1,22 @@
 <html ng-app="applist">
         <head >
-                <link rel="stylesheet" href="/css/bootstrap.min.css">
+                <link rel="stylesheet" href="css/bootstrap.min.css">
+                <link rel="stylesheet" href="css/customecss.css">
+                <style>
+                    .sample-show-hide {
+                        transition: all linear 0.5s;
+                    }
+                
+                </style>
+                
         </head>
         <body>       
             <div ui-view>
                 <div ng-controller="userController">
                     <div ng-repeat="user in users.data">
-                        <list-users user="user"></list-users>
+                        <heading-list ng-class="sample-show-hide">
+                            <list-users user="user"></list-users>
+                        </heading-list>
                     </div>
                         
                     <div class="panel panel-footer">
