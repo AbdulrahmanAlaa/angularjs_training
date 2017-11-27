@@ -3,17 +3,17 @@
                 <link rel="stylesheet" href="/css/bootstrap.min.css">
         </head>
         <body>       
-                <div ui-view>
-                    <div ng-controller="userController">
+            <div ui-view>
+                <div ng-controller="userController">
                     <div ng-repeat="user in users.data">
-                        <list-users></list-users>
+                        <list-users user="user"></list-users>
                     </div>
                         
-                                <div class="panel panel-footer">
-                                    <button class="btn btn-primary">Add</button>
-                                    <button class="btn btn-danger">Remove</button>
-                                </div>
+                    <div class="panel panel-footer">
+                        <button class="btn btn-primary">Add</button>
+                        <button class="btn btn-danger">Remove</button>
                     </div>
+            </div>
                 </div>
             <!-- Angular js  -->
             <script src="scripts/vendors/angular/angular.js"></script>
@@ -25,4 +25,4 @@
             <script src="services/userservice.js"></script>
             <script src="services/getusers.js"></script>    
         </body>
-        </html>
+</html>

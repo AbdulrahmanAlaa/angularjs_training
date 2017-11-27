@@ -9,13 +9,13 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         // HOME STATES AND NESTED VIEWS ========================================
         .state('home', {
             url: '/home',
-            templateUrl: 'partial-home.html'
+            templateUrl: 'templates/partial-home.html'
         })
 
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
         .state('about', {
             url:'/about',
-            templateUrl:'partial-about.html'      
+            templateUrl:'templates/partial-about.html'      
         });
 
 });
