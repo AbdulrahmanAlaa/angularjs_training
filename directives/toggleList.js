@@ -1,4 +1,4 @@
-applist.directive('headingList', function(){
+applist.directive('toggleList', function(){
     return {
         replace:true,
         template: '<div ng-class="sample-show-hide"><h4 class="panel panel-danger sample-show-hide" ng-click="ToggleVisible()">Toggle Me</h4><div ng-show="visible" ng-transclude></div></div>',

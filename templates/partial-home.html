@@ -2,21 +2,15 @@
         <head >
                 <link rel="stylesheet" href="css/bootstrap.min.css">
                 <link rel="stylesheet" href="css/customecss.css">
-                <style>
-                    .sample-show-hide {
-                        transition: all linear 0.5s;
-                    }
-                
-                </style>
                 
         </head>
         <body>       
             <div ui-view>
                 <div ng-controller="userController">
                     <div ng-repeat="user in users.data">
-                        <heading-list ng-class="sample-show-hide">
+                        <toggle-list>
                             <list-users user="user"></list-users>
-                        </heading-list>
+                        </toggle-list>
                     </div>
                         
                     <div class="panel panel-footer">
