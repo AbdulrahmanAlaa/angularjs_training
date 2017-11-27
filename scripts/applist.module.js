@@ -1,5 +1,5 @@
  //definition
- angular.module('applist', []);
+ angular.module('applist', ['ngAnimate']);
  //usage
  var applist =angular.module('applist');
 
